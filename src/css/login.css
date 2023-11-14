@@ -1,0 +1,38 @@
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section .grid-container {
+  width: 66%;
+  height: 70vh;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr 2fr 1fr 1fr 2fr;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-areas: ". . . . ." ". usuario usuario usuario ." ". . . . ." ". senha senha senha ." ". . . . ." ". . . botao ." ". . . . .";
+}
+section .usuario {
+  font-weight: 700;
+  grid-area: usuario;
+}
+section .usuario input {
+  width: 100%;
+  height: 80%;
+}
+section .senha {
+  font-weight: 700;
+  grid-area: senha;
+}
+section .senha input {
+  width: 100%;
+  height: 80%;
+}
+section .botao {
+  font-weight: 700;
+  font-size: larger;
+  grid-area: botao;
+}
+
+/*# sourceMappingURL=login.css.map */
