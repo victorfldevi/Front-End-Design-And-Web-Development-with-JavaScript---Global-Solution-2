@@ -19,6 +19,20 @@ section {
                              ". . . . ."
                              ". . . botao ."
                              ". . . . .";
+
+        @media screen and (max-width: 500px){
+            grid-template-areas: ". . . . ."
+            ". usuario usuario usuario ." 
+            ". . . . ."
+            ". senha senha senha ."
+            ". . . . ."
+            ". botao botao botao ."
+            ". . . . .";
+        }
+
+        p {
+            padding: 0.2rem 0;
+        }
     }
 
     .usuario{

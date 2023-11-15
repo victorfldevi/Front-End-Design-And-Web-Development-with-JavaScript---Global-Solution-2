@@ -13,6 +13,14 @@ section .grid-container {
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
   grid-template-areas: ". . . . ." ". usuario usuario usuario ." ". . . . ." ". senha senha senha ." ". . . . ." ". . . botao ." ". . . . .";
 }
+@media screen and (max-width: 500px) {
+  section .grid-container {
+    grid-template-areas: ". . . . ." ". usuario usuario usuario ." ". . . . ." ". senha senha senha ." ". . . . ." ". botao botao botao ." ". . . . .";
+  }
+}
+section .grid-container p {
+  padding: 0.2rem 0;
+}
 section .usuario {
   font-weight: 700;
   grid-area: usuario;

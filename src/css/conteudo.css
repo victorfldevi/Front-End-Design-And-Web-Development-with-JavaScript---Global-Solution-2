@@ -131,21 +131,11 @@
 }
 .card1 div h1, .card2 div h1, .card3 div h1 {
   font-size: 3rem;
-  line-height: 10vw;
+  line-height: 10vh;
 }
 
 .textoCanto, .textoSolucao div, .card1, .card2, .card3 {
   line-height: 1.6rem;
-}
-@media screen and (max-width: 1133px) {
-  .textoCanto, .textoSolucao div, .card1, .card2, .card3 {
-    line-height: 1.4rem;
-  }
-}
-@media screen and (max-width: 929px) {
-  .textoCanto, .textoSolucao div, .card1, .card2, .card3 {
-    line-height: 1.4rem;
-  }
 }
 
 /*# sourceMappingURL=conteudo.css.map */

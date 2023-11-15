@@ -170,19 +170,11 @@
 
         h1{
             font-size: 3rem;
-            line-height: 10vw;
+            line-height: 10vh;
         }
     }
 }
 
 %line-heights{
     line-height: 1.6rem;
-
-    @media screen and (max-width: 1133px) {
-        line-height: 1.4rem;
-    }
-
-    @media screen and (max-width: 929px) {
-        line-height: 1.4rem;
-    }
 }

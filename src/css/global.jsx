@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 //é uma função para aplicar estilos globais em toda a aplicação, sem as restrições de escopo
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body{
-    font-family: 'Arial';
+    font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 1920px) {
@@ -19,13 +21,7 @@ body{
 
 @media screen and (max-width: 1248px) {
     html{
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 1041px) {
-    html{
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
