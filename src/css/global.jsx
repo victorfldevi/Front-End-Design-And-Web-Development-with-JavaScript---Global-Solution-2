@@ -10,5 +10,30 @@ const GlobalStyle = createGlobalStyle`
 body{
     font-family: 'Arial';
 }
+
+@media screen and (max-width: 1920px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1248px) {
+    html{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1041px) {
+    html{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 929px) {
+    html{
+        font-size: 12px;
+    }
+}
+
 `;
 export default GlobalStyle;

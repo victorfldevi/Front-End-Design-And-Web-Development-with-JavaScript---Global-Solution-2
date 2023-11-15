@@ -1,0 +1,188 @@
+.grid-container-top{
+    height: 120vh;
+
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 5fr;
+    grid-template-rows: auto 4fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas: 
+    "imagem imagem imagem textoCanto"
+    "tituloPrincipal textoSolucao textoSolucao textoCanto"
+    ". . . textoCanto"
+    ". . botao textoCanto";
+
+    @media screen and (max-width: 740px){
+        height: 180vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "imagem imagem imagem imagem"
+        "tituloPrincipal tituloPrincipal textoSolucao textoSolucao"
+        "textoCanto textoCanto textoCanto textoCanto"
+        ". botao botao .";
+    }
+
+    @media screen and (max-width: 389px){
+        height: 190vh;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "imagem imagem imagem"
+        "tituloPrincipal tituloPrincipal tituloPrincipal"
+        "textoSolucao textoSolucao textoSolucao"
+        "textoCanto textoCanto textoCanto"
+        ". botao .";
+    }
+
+    article{
+        border: 2px solid #ccc;
+    }
+}
+
+.grid-container-bottom{
+    height: 40vh;
+
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-areas: 
+    "tituloSecundario . botaoLogout"
+    "card1 card2 card3";
+
+    @media screen and (max-width: 740px){
+        height: 64vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "tituloSecundario botaoLogout"
+        "card1 card1"
+        "card2 card2"
+        "card3 card3";
+    }
+
+    @media screen and (max-width: 357px){
+        h1{
+            font-size: 2.1rem;
+        }
+    }
+}
+
+.imagem{
+    grid-area: imagem;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.textoCanto{
+    grid-area: textoCanto;
+    @extend %line-heights;
+
+    div{
+        width: 80%;
+        padding: 1rem 0.4rem 2rem 0.4rem;
+
+        h1{
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+    }
+}
+
+.tituloPrincipal{
+    grid-area: tituloPrincipal;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.textoSolucao{
+    grid-area: textoSolucao;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+
+    div{
+        width: 80%;
+        @extend %line-heights;
+    }
+}
+
+.botao{
+    grid-area: botao;
+}
+
+.tituloSecundario{
+    grid-area: tituloSecundario;
+    margin: 5rem 1rem;
+    font-size: 2rem;
+}
+
+.botaoLogout{
+    grid-area: botaoLogout;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    button{
+        height: fit-content;
+        padding: 1rem 4rem;
+    }
+}
+
+.card1{
+    grid-area: card1;
+    @extend %card-content;
+
+}
+
+.card2{
+    grid-area: card2;
+    @extend %card-content;
+
+}
+
+.card3{
+    grid-area: card3;
+    @extend %card-content;
+
+}
+
+%card-content{
+    display: flex;
+    align-items: center;
+    @extend %line-heights;
+
+    img{
+        width: 40%;
+    }
+
+    div{
+        width: 50%;
+        padding-left: 1rem;
+
+        h1{
+            font-size: 3rem;
+            line-height: 10vw;
+        }
+    }
+}
+
+%line-heights{
+    line-height: 1.6rem;
+
+    @media screen and (max-width: 1133px) {
+        line-height: 1.4rem;
+    }
+
+    @media screen and (max-width: 929px) {
+        line-height: 1.4rem;
+    }
+}

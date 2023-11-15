@@ -15,21 +15,40 @@ header {
       font-size: 1.6rem;
       font-weight: 600;
     }
-  }
 
-  .headerMenu ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-  }
-  
-  .tlink {
-    text-decoration: none;
-    color: yellow;
-    font-size: 20px;
-    text-transform: uppercase;
+    @media screen and (max-width: 840px){
+      h1{
+        font-size: 2rem;
+      }
 
-    &:hover{
-        color: white;
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media screen and (max-width: 700px){
+      h1{
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        padding: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media screen and (max-width: 470px){
+      text-align: center;
+
+      h1{
+        padding: 0.2rem;
+        font-size: 1.2rem;
+      }
+
+      p {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
     }
   }

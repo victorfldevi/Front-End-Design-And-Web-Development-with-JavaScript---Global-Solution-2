@@ -6,15 +6,16 @@ function Login() {
   /*hook useref ele retorna uma referencia a um elemento ou componente sem ter que ser renderizado novamente e também permite acesso ao DOM */
   const user = useRef();
   const password = useRef();
-  /* pegando o usuario e adcionando ao sessionStorage */
+  
   const getUser = sessionStorage.getItem('userData');
   /* pegando a senha e adcionando ao sessionStorage */
   const getSenha = sessionStorage.getItem('senhaData');
-  /* pegando a senha e adcionando ao sessionStorage */
   const getEmail = sessionStorage.getItem('emailData');
 
-    //useState
-    const [dados, setDados]= useState([]);
+  //useState
+  const [dados, setDados] = useState([]);
+  const [feedbackUser, setFeedbackUser] = useState();
+  const [feedbackSenha, setFeedbackSenha] = useState();
 
   //promisse assincrona
 
@@ -36,10 +37,29 @@ function Login() {
       sessionStorage.setItem('userData', dados.map((data) => data.nome));
       sessionStorage.setItem('senhaData', dados.map((data) => data.senha));
       sessionStorage.setItem('emailData', dados.map((data) => data.email));
+      setFeedbackUser("");
+      setFeedbackSenha("");
+      window.location.reload();
 
     } else {
-      e.preventDefault();
-      alert('usuário e senha inválidos !!!');
+      if (user.current.value != data.nome || user.current.value === ""){
+        e.preventDefault();
+        setFeedbackUser("* Não há usuários com esse login");
+        if (user.current.value === ""){
+          setFeedbackUser("* Este campo é obrigatório");
+        }
+      } else {
+        e.preventDefault();
+        setFeedbackUser("");
+      }
+      
+      if (password.current.value != data.password || password.current.value === ""){
+        e.preventDefault();
+        setFeedbackSenha("* A senha não condiz com o login");
+        if (password.current.value === ""){
+          setFeedbackSenha("* Este campo é obrigatório");
+        }
+      }
     }
     });
   };
@@ -54,11 +74,12 @@ function Login() {
         <div className="usuario">
           <p>Usuário</p>
           <input type="text" ref={user} placeholder={dados.map((data) => data.nome)}/>
-          <p>{}</p>
+          <p>{feedbackUser}</p>
         </div>
         <div className="senha">
           <p>Senha</p>
           <input type="password" ref={password} placeholder={dados.map((data) => data.senha)} />
+          <p>{feedbackSenha}</p>
         </div>
           <input className="botao" type="submit" value="Login >>" />
         </form>

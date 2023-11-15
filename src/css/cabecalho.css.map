@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/cabecalho.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;EAEA;;AAEA;EACE;EACA;;AAEF;EACE;EACA;;;AAIJ;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACI","file":"cabecalho.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/cabecalho.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;EACA;EAEA;;AAEA;EACE;EACA;;AAEF;EACE;EACA;;AAGF;EACE;IACE;;EAGF;IACE;;;AAIJ;EACE;IACE;IACA;;EAGF;IACE;IACA;;;AAIJ;EAxCJ;IAyCM;;EAEA;IACE;IACA;;EAGF;IACE;IACA","file":"cabecalho.css"}
