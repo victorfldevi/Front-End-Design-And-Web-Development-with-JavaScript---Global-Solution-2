@@ -35,7 +35,7 @@ function Conteudo() {
                 </div>
             </article>
             <div className='tituloPrincipal'>
-                <h1>Auto Call</h1>
+                <h1>SlipED</h1>
             </div>
             <article className='textoSolucao'>
                 <div>
